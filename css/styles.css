@@ -1,0 +1,895 @@
+body {
+    font-family: 'Nerko One', cursive;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+   
+
+}
+/* Typeography General*/
+p{ 
+    font-size: 1rem;
+    font-weight:bold;
+    line-height: 1.8em;  
+    color:#3a3737;
+    font-family: 'Poppins', sans-serif;
+}
+/*for (about us/our services/let's talking/resources)*/
+h1{
+    background-color:#004aad;
+    font-family: 'Chewy', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+    padding:10px;
+    padding-left: 96px;
+    }
+/*for (our services headers and resources headers*/
+h2{
+background-color: white;
+color:#004aad;
+font-family: 'Poppins', sans-serif;
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+}
+h3{
+    color:#004aad;
+    font-size: 23px;
+font-weight: bold;
+}
+
+h4{
+    color:black;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/* start landing page*/
+/*insert background image to the page*/
+.container-resources{
+  margin:0 auto;
+  width:85%
+}
+
+.home {
+    min-height: 100vh;
+    background-image: url("../imgs/1.png");
+    background-size: cover;
+    position: relative;
+    transition: all 1s ease-in-out;/*to smooth changing background*/
+    background-repeat: no-repeat;/*for responsive background*/
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/*start responsive nav bar*/
+
+
+
+nav{
+    background:white;
+    max-height:80px;
+    font-family: 'Nerko One', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bolder;
+    text-transform: capitalize;
+    user-select: none;
+  }
+  nav:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  nav .logo{
+    float: left;
+  
+    padding-left: 60px;
+  }
+  nav ul{
+    float: right;
+    margin-right: 50px;
+    list-style: none;
+  
+  }
+  nav ul li{
+    float: left;
+    background:white;
+  
+  }
+  nav ul li a{
+    color:black;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+  nav ul li a:hover{
+    color: #004aad;
+    border-radius: 5px;
+    box-shadow:  0 0 5px  #004aad,
+                 0 0 10px #004aad;
+                 
+  }
+  nav ul ul li:hover{
+      background-color: #a5c7ea;
+  }
+
+  nav ul ul li a:hover{
+    box-shadow: none;
+  }
+  nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #004aad;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+   padding:0px;
+  }
+  nav ul ul ul{
+    border-top: none;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  nav ul ul li a{
+    line-height: 35px;
+    
+  }
+  
+  nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+  .show,.icon,nav input{
+    display: none;
+  }
+  .fa-plus{
+    font-size: 15px;
+    margin-left: 40px;
+  }
+  @media all and (max-width: 968px) {
+    nav ul{
+    
+      float: left;
+      text-align: center;
+    
+    }
+    nav .logo{
+      padding-left: 30px;
+      width: 100%;
+    }
+    .show + a,nav ul{
+      display: none;
+    }
+    nav ul li,nav ul ul li{
+      display: block;
+      width: 100%;
+    }
+    nav ul li a:hover{
+      box-shadow: none;
+      color:#004aad
+    }
+    .show{
+      display: block;
+      color: black;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+    .show:hover{
+      color:#004aad;
+      background-color: #a5c7ea;
+    }
+    .icon{
+      display: block;
+      color: black;
+      position: absolute;
+      top: 0;
+      right: 40px;
+      line-height: 70px;
+      cursor: pointer;
+      font-size: 25px;
+    }
+    nav ul ul{
+      top: 70px;
+      border-top: 0px;
+      float: none;
+      position: static;
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+    nav ul ul a{
+      padding-left: 40px;
+    }
+    nav ul ul ul a{
+      padding-left: 80px;
+    }
+    nav ul ul ul li{
+      position: static;
+    }
+    [id^=btn]:checked + ul{
+      display: block;
+    }
+    nav ul ul li{
+      border-bottom: 0px;
+    }
+    span.cancel:before{
+      content: '\f00d';
+    }
+  }
+
+
+/*end drob down menu of resources*/
+
+
+
+/* dynamically create a navigation menu based on the sections of the page */
+
+html{
+    scroll-behavior:smooth;
+}
+
+.about-us{
+    margin-top: 60px;
+    
+}
+
+
+.why-sai{
+  margin:50px;
+}
+
+
+
+
+/*start feedback div */
+.demo{ background-image:url("../imgs/quotes3.png") }
+.testimonial{
+    padding: 35px 50px;
+    margin: 0 20px 30px;
+    border-radius: 0 70px 0 70px;
+    border: 5px solid black;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+   
+}
+
+.testimonial .pic{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.testimonial .title{
+    display: block;
+    margin: 0 0 7px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #036e74;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.testimonial .post{
+    display: block;
+    font-size: 15px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.testimonial .description{
+    font-size: 18px;
+    color: black;
+    line-height: 30px;
+}
+.owl-theme .owl-controls{ margin-top: 0; }
+.owl-theme .owl-controls .owl-page span{
+    background: #fff;
+    opacity: 0.8;
+    transition: all 0.4s ease 0s;
+}
+.owl-theme .owl-controls .owl-page.active span{ background: #036e74; }
+.our-services{
+    display:block;
+    padding-bottom: 200px;
+    padding-top: 60px;
+    
+}
+/*the end of testimonials*/
+/*start our services boxes*/
+
+.our-services .service{
+    display:flex;
+    flex-wrap: wrap; 
+    margin:auto;
+    padding:5%;
+}
+
+.our-services .service .box{
+    
+padding: 4px;
+cursor: pointer;
+width:30%;/* the half of the headerbox*/
+box-sizing: border-box;/* to prevent including porder and padding size to the div size dont use margin if you want to insert margin you have to supstrict it from plan width*/
+margin:1% ;
+align-items: center;
+text-align: center;
+border-radius:10px;
+border: 1px solid #004aad;
+border-bottom: 10px solid #004aad;
+box-shadow: 5px 5px 5px grey;
+height: auto;
+
+}
+
+/*
+.our-services .service .box:hover{
+box-shadow:gray;
+border:#004aad;
+background-color: #004bad5f;
+border-radius: 10px;
+}
+*/
+.our-services .service .box .sora{
+    border-radius: 4px;
+    text-align: center;
+    width:100%;
+
+
+}
+.our-services .service .box .sora img{
+  max-height: 120px;
+  max-width: 120px;
+}
+.our-services .service .box h2{
+
+  font-size: 1.3rem;
+}
+
+/*start designing resources page*/
+.resource{
+    min-height: 100vh;
+    background-image: url("../imgs/Learning-development-jobs-1280x720.jpg");
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;/*for responsive background*/
+    background-position: center center;
+    background-attachment: fixed;
+}
+.email-pag{
+    background-image: url(../imgs/email-marketing-2362038_1920.png);
+}
+/*
+.resource .overlay{
+    background-color:#004badba;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 1;
+}
+
+.resource .text{
+
+    position: absolute;
+    left:45%;
+    top:25%;
+    color:white;
+    transform: translate(-50% ,-50%);
+}
+.resource .text h1{
+font-size: 50px;
+color:black;
+background-color:transparent;
+}
+.resource .text p{
+font-size: 20px;
+font-family: 'Chewy', cursive;
+color:black;
+}
+*/
+/*applay a container just for applay margin and padding to the page*/
+
+
+.candy-wrapper{
+width: 100%;
+margin:0 auto;
+position:relative;
+
+}
+/*pages with table of content */
+.sidebar{
+height: auto; /* Full-height: remove this if you want "auto" height */
+width:20%; /* Set the width of the sidebar */
+background-color:#a5c7ea;
+padding: 17px;
+padding-top: none;
+box-sizing: border-box;
+box-shadow: 10px 10px 10px gray;
+display: inline-block;
+vertical-align: top;
+
+}
+.fixedsticky {
+    top: 15px;
+position:sticky
+}
+.fixedsticky {
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+}
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+	position: static;
+}
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+	position: fixed;
+}
+.fixedsticky-dummy {
+	display: none;
+}
+.fixedsticky-on + .fixedsticky-dummy {
+	display: block;
+}
+
+.sidebar h2{
+    margin:0px;
+}
+
+.sidebar li{
+    padding-top: 10px;
+}
+.sidebar li:hover{
+    text-decoration: underline;
+    
+}
+.sidebar a{
+    text-decoration: none;
+}
+.main{
+ width:74%;
+padding:40px;
+background-color:rgba(174, 218, 243, 0.323) ;
+display: inline-block;
+box-sizing: border-box;
+vertical-align: top;
+margin:2%;
+}
+.section:first-child{
+    margin-top:150px;
+}
+.section{
+
+width:100%;
+margin-top:50px;
+}
+
+.section .sorty{
+    text-align: center;
+    width:95%;
+    margin:auto;
+    max-width: 1000px;
+
+}
+.section .sorty img{
+    width:100%;
+}
+
+.section span{
+    font-size: 17px ;
+    font-weight: bolder;
+    color:rgb(153, 151, 6);
+    
+
+
+}
+/*some styles for videos*/
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.content-pag{
+    background-image: url("../imgs/content-marketing-4111003_1280.jpg");
+
+}
+.advertising-pag{
+    background-image: url("../imgs/advertising\ .png");
+}
+.keys-pag{
+    background-image: url("../imgs/5\ kayes.png");
+}
+
+.section li{
+    font-size: 1rem;
+    font-weight:bold;
+    line-height: 1.7em;  
+    color:#3a3737;
+    margin: 20px;
+}
+
+.content-king
+{
+    display:flex;
+    margin-top:20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+
+}
+.content-king-reverse{
+  display:flex;
+  margin-top:20px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+
+}
+.contento
+{
+width: 68%;
+}
+
+ .imgo{
+text-align: center;
+width: 32%;
+padding: 20px;
+}
+
+.imgo img{
+max-height: 220px;
+max-width:220px;
+border-radius:10px;
+}
+/*div of why sai image*/
+.imgoo{
+  width:32%;
+  padding: 20px;
+  text-align: center;
+}
+.imgoo img{
+max-height: 300px;
+max-width:300px;
+border-radius:10px;
+}
+/*div content of services pages*/
+.free-div{
+  display:flex;
+  margin:100px 0px;
+  box-sizing: border-box;
+}
+.free-div .free-content{
+width:70%;
+padding:0px 0px 0px 150px;
+
+
+}
+.free-div .free{
+ 
+  width:30%;
+
+}
+.free-div .free img{
+  max-height: 140px;
+  max-width: 140px;
+  margin:5px;
+}
+
+.section .analytics{
+    
+display:flex;
+
+
+
+
+}
+.section .analytics img{
+    height:200px;
+    width: 32%;
+    margin:auto;
+}
+
+
+.index{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin:auto;
+
+}
+.index-component{
+    display:block;
+    width:32%;
+}
+.index-component li{
+padding-top: 15px;
+}
+.index-component a{
+    text-decoration: none;
+    color: #004aad;
+    font-size: 20px;
+    
+}
+.index-component li:hover{
+    text-decoration:underline;
+}
+/*end designing resources page*/
+
+/*setting up popup pox stayles*/
+.popup-overlay{
+    position:fixed;
+    background-color:#000000b0;
+    left:0;
+    top:0;
+    z-index:1000;
+    width:100%;
+    height:100%;
+
+
+}
+.popup-box{
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background-color: white;
+    border:1px solid black;
+    padding:10px;
+    z-index: 1001;
+
+}
+
+
+.close-btn{
+    position:absolute;
+    z-index: 1001;
+    font-size: 4em;
+    color:white;
+    left:19%;
+    cursor: pointer;
+
+}
+
+.lets-talking{
+    background-color:#a5c7ea;
+    display:block;
+
+
+
+}
+.lets-talking .contact{
+    display:flex;
+    flex-wrap: wrap; 
+    margin: 10px 30px 0 50px;
+    align-items: center;
+
+}
+
+ .contacta{
+
+  
+    text-align: center;
+    padding:10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+}
+.contacta a{
+  margin:3px;
+}
+
+.entire{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+
+}
+.component{
+    display:block;
+    width:20%;
+    margin:0 15px;
+    text-align:left;
+ 
+}
+.component h3{
+    padding-left: 40px;
+    text-align:left;
+    color:black;
+font-size:22px;
+font-family:'Nerko One', cursive; ;
+}
+
+.component li{
+    list-style: none;
+    margin-top:10px;
+}
+.component a{
+    text-decoration: none;
+color:black;
+font-size:18px;
+font-family:'Nerko One', cursive; 
+font-weight: bold;
+}
+.component a:hover{
+    color:white;
+}
+
+
+
+
+
+.footer{
+    background-color: rgb(56, 53, 53);
+    color:rgb(211, 209, 209);
+    font-weight: bolder;
+    text-align: center;
+    width:100%;
+    padding:none;
+    height:50px;
+    padding-top: 25px;
+    padding-left: 0px;
+    
+}
+
+
+
+/*add some styles to webpage to be responsive with devices with the small and mobile device*/
+
+@media (max-width:991px){
+
+.lets-talking .contact{
+    display: block;
+    margin: 30px 30px 0 30px;
+    text-align: center;
+
+}
+.lets-talking .contact .contacta{
+    width:100%;
+    text-align: center;
+    margin:30px 30px 0 30px;
+}
+
+.section .analytics img {
+    height: 200px;
+    width: 30%;
+    margin: auto;
+}
+.resource .text p {
+    font-size: 20px;
+    font-family: 'Chewy', cursive;
+    color: black;
+    padding-left: 40px;
+}
+.content-king{
+display:block;
+}
+.content-king-reverse{
+  flex-direction: column-reverse;
+}
+
+.imgo,
+.contento{
+  width: 100%;
+  padding:0px;
+}
+ .imgo{
+    text-align: center;
+}
+.imgoo{
+  width:100%;
+ 
+  text-align: center;
+}
+
+.free-div{
+  display: block;
+  text-align: center;
+}
+.free-div .free-content,
+.free-div .free{
+  width: 100%;
+  max-width: none;
+  margin-bottom: 30px;
+  padding:0px;
+  
+}
+
+
+.component{
+    display:block;
+    width:35%;
+    margin:30px;
+    list-style: none;
+
+}
+.candy-wrapper{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  margin:auto;
+  box-sizing: border-box;
+}
+.fixedsticky{
+  position:relative;
+ 
+}
+.candy-wrapper .main{
+  margin: 10px;
+  width:97%;
+  order:2;
+}
+.candy-wrapper .sidebar{
+width: 93%;
+margin: 25px;
+order:1;
+}
+.our-services .service .box{
+  text-align: center;
+  margin:10px;
+  width:46%;
+}
+
+}
+/*styles of feedback*/
+
+
+
+/*add some styles to webpage to be responsive with devices with the medium and larg screen */
+
+@media (max-width:650px){
+    .our-services .service .box{
+        text-align: center;
+        margin:10px;
+        width:100%;
+    }
+  }
+
+
+@media (min-width:992px){
+
+  .lets-talking .contact .contacta {
+      width: 42%;
+      text-align: center;
+      margin: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+}
+
+}
