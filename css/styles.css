@@ -90,7 +90,7 @@ nav{
   }
   nav ul{
     float: right;
-    margin-right: 50px;
+    margin-right: 2px;
     list-style: none;
   
   }
@@ -215,13 +215,9 @@ nav{
       display: none;
       opacity: 1;
       visibility: visible;
+	margin-right: 2px;
     }
-    nav ul ul a{
-      padding-left: 40px;
-    }
-    nav ul ul ul a{
-      padding-left: 80px;
-    }
+ 
     nav ul ul ul li{
       position: static;
     }
