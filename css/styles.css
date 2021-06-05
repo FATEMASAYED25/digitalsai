@@ -70,7 +70,7 @@ h4{
 nav{
     background:white;
     max-height:80px;
-    font-family: 'Nerko One', cursive;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -733,7 +733,7 @@ padding-top: 15px;
     text-align:left;
     color:black;
 font-size:22px;
-font-family:'Nerko One', cursive; ;
+  font-family: 'Poppins', sans-serif;
 }
 
 .component li{
@@ -744,7 +744,7 @@ font-family:'Nerko One', cursive; ;
     text-decoration: none;
 color:black;
 font-size:18px;
-font-family:'Nerko One', cursive; 
+  font-family: 'Poppins', sans-serif;
 font-weight: bold;
 }
 .component a:hover{
