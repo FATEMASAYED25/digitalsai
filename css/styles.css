@@ -171,7 +171,7 @@ nav{
     
     }
     nav .logo{
-      padding-left: 30px;
+      padding-left: 0px;
       width: 100%;
     }
     .show + a,nav ul{
@@ -643,6 +643,9 @@ padding-top: 15px;
     font-size: 20px;
     
 }
+.index-component h3{
+  text-align: center;
+}
 .index-component li:hover{
     text-decoration:underline;
 }
@@ -861,6 +864,18 @@ order:1;
   text-align: center;
   margin:10px;
   width:46%;
+}
+	.index-component{
+  display:block;
+  width:46%;
+  margin:5px;
+}
+.index-component li{
+padding-top: 15px;
+margin:2px
+}
+.index-component a{
+  font-size: 18px;
 }
 
 }
