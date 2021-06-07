@@ -491,7 +491,7 @@ margin-top:50px;
 
 .section .sorty{
     text-align: center;
-    width:95%;
+    width:100%;
     margin:auto;
     max-width: 1000px;
 
@@ -569,7 +569,7 @@ padding: 20px;
 }
 
 .imgo img{
-  width: 95%;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
