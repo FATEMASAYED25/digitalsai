@@ -358,9 +358,11 @@ border-radius: 10px;
 
 }
 .our-services .service .box .sora img{
-  max-height: 120px;
-  max-width: 120px;
+     width: 60%;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
 
 
 /*start designing resources page*/
@@ -567,9 +569,9 @@ padding: 20px;
 }
 
 .imgo img{
-max-height: 220px;
-max-width:220px;
-border-radius:10px;
+  width: 95%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 /*div of why sai image*/
 .imgoo{
@@ -578,31 +580,30 @@ border-radius:10px;
   text-align: center;
 }
 .imgoo img{
-max-height: 300px;
-max-width:300px;
-border-radius:10px;
+ width: 85%;
+ object-fit: cover;
+ border-radius: 10px;
 }
 /*div content of services pages*/
 .free-div{
   display:flex;
+  width:100%;
   margin:100px 0px;
   box-sizing: border-box;
 }
 .free-div .free-content{
 width:70%;
-padding:0px 0px 0px 150px;
-
-
+padding:20px 0px 0px 150px;
 }
+
 .free-div .free{
- 
   width:30%;
-
 }
+
 .free-div .free img{
-  max-height: 140px;
-  max-width: 140px;
-  margin:5px;
+  width: 60%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .section .analytics{
@@ -827,7 +828,11 @@ display:block;
   padding:0px;
   
 }
-
+.free-div .free img{
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .component{
     display:block;
