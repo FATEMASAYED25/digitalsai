@@ -819,6 +819,7 @@ display:block;
 .free-div{
   display: block;
   text-align: center;
+  overflow-x: hidden;
 }
 .free-div .free-content,
 .free-div .free{
