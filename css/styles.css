@@ -907,6 +907,10 @@ margin:2px
  .index-component {
 	 width:85%;
   }
-
+   @media (max-width:900px){
+     .home{
+      background-image: url("../imgs/media\ query.png");
+    }
+   
 
 
