@@ -29,13 +29,13 @@ h2{
 background-color: white;
 color:#004aad;
 font-family: 'Poppins', sans-serif;
-font-size: 25px;
+font-size: 23px;
 font-weight: bold;
 text-align: center;
 }
 h3{
     color:#004aad;
-    font-size: 23px;
+    font-size: 21px;
 font-weight: bold;
 }
 
@@ -501,7 +501,7 @@ margin-top:50px;
 }
 
 .section span{
-    font-size: 17px ;
+    font-size: 1rem;
     font-weight: bolder;
     color:rgb(153, 151, 6);
     
@@ -675,7 +675,7 @@ padding-top: 15px;
 .close-btn{
     position:absolute;
     z-index: 1001;
-    font-size: 4em;
+    font-size: 2em;
     color:white;
     left:19%;
     cursor: pointer;
@@ -727,7 +727,7 @@ padding-top: 15px;
     padding-left: 40px;
     text-align:left;
     color:black;
-font-size:22px;
+
   font-family: 'Poppins', sans-serif;
 }
 
