@@ -808,13 +808,15 @@ display:block;
   flex-direction: column-reverse;
 }
 
-.imgo,
 .contento{
   width: 100%;
   padding:0px;
 }
  .imgo{
-    text-align: center;
+  text-align: center;
+  padding:0px;
+  margin:auto;
+  width:50%;
 }
 .imgoo{
   width:100%;
