@@ -1,3 +1,4 @@
+/*
 // make a randome background
 let landing= document.querySelector(".home");
 
@@ -57,10 +58,10 @@ document.body.appendChild(overlay);
       });
       
       });
-      
+      */
   
         
-// appear and desapear nav while scrolling .
+// add testmonial
 $(document).ready(function(){
   $("#testimonial-slider").owlCarousel({
       items:1,
