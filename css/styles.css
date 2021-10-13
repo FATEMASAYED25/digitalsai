@@ -72,6 +72,7 @@ h4{
 
 
 
+
 nav{
     background:white;
     max-height:80px;
@@ -90,18 +91,24 @@ nav{
   }
   nav .logo{
     float: left;
-  
-    padding-left: 60px;
+  width:180px;
+  height: 80px;
+    padding-left: 50px;
+  }
+  nav .logo img{
+    width:100%;
+    height: 100%;
   }
   nav ul{
     float: right;
     margin-right: 2px;
     list-style: none;
-  
+  padding:0 35px 0 0 ;
   }
   nav ul li{
     float: left;
-    background:white;
+   
+    position: relative;
   
   }
   nav ul li a{
@@ -109,6 +116,10 @@ nav{
     line-height: 50px;
     text-decoration: none;
     font-size: 18px;
+  
+    
+  }
+  .padding{
     padding: 8px 15px;
   }
   nav ul li a:hover{
@@ -128,25 +139,27 @@ nav{
   nav ul ul{
     z-index: 1000;
     position: absolute;
-    top: 90px;
+    top: 70px;
     border-top: 3px solid #004aad;
-    opacity: 0;
-    visibility: hidden;
+   left:-36px;
     transition: top .3s;
    padding:0px;
+   background-color: white;
+  opacity: 0;
+  visibility: hidden;
   }
   nav ul ul ul{
     border-top: none;
   }
   nav ul li:hover > ul{
-    top: 70px;
+    top: 50px;
     opacity: 1;
     visibility: visible;
   }
   nav ul ul li{
     position: relative;
     margin: 0px;
-    width: 200px;
+    width: 240px;
     float: none;
     display: list-item;
     border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -171,14 +184,15 @@ nav{
   }
   @media all and (max-width: 968px) {
     nav ul{
-    
-      float: left;
+    padding:50px;
+    float:left;
       text-align: center;
-    
+    border:2px solid blue;
+    width:100%;
     }
     nav .logo{
-      padding-left: 0px;
-      width: 100%;
+     padding-left: 20px;
+    width: 140px;
     }
     .show + a,nav ul{
       display: none;
@@ -195,7 +209,7 @@ nav{
       display: block;
       color: black;
       font-size: 18px;
-      padding: 0 20px;
+     
       line-height: 70px;
       cursor: pointer;
     }
@@ -207,19 +221,21 @@ nav{
       display: block;
       color: black;
       position: absolute;
-      top: 0;
+      top: 10px;
       right: 40px;
       line-height: 70px;
       cursor: pointer;
       font-size: 25px;
+      transform: scaleX(1.5);
+     
     }
+   
     nav ul ul{
       
       top: 70px;
       border-top: 0px;
       float: none;
       position: static;
-      display: none;
       opacity: 1;
       visibility: visible;
       margin-right: 2px;
@@ -239,7 +255,6 @@ nav{
       content: '\f00d';
     }
   }
-
 
 /*end drob down menu of resources*/
 
