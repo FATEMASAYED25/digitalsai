@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // make a randome slideshow background
 /*
 let landing= document.querySelector(".home");
@@ -63,12 +62,6 @@ document.body.appendChild(overlay);
   
         
 // add testmonials
-=======
-
-  
-        
-// add testmonial
->>>>>>> b26a267ec6fb1c9958eb5314f1d3f89cf745995f
 $(document).ready(function(){
   $("#testimonial-slider").owlCarousel({
       items:1,
@@ -82,7 +75,35 @@ $(document).ready(function(){
 });
 
 
+//start feedback div
+/*
 
+(function autoSlider(){
+
+
+  $('.slider .active').each(function(){
+
+    if (!$(this).is(':last-child')) {
+
+      $(this).delay(5000).fedeOut(1000, function (){
+
+        $(this).removeClass('active').next().addClass('active').fadeIn();
+
+        autoSlider();
+      });
+    } else {
+      $(this).delay(5000).fedeOut(1000, function (){
+        $(this).removeClass('active');
+        $('.slider div').eq(0).addClass('active').fadeIn();
+        autoSlider();
+      });
+    }
+
+}());
+
+});
+
+*/
 
 
 

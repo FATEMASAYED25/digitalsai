@@ -8,16 +8,7 @@ body {
 html{
   scroll-behavior:smooth;
 
-    overflow-x: hidden;/*to treat float style in various dives*/
 }
-html{
-  scroll-behavior:smooth;
-
-}
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -66,7 +57,6 @@ h4{
 /*insert background image to the page*/
 
 
-
 .home {
     min-height: 100vh;
     background-image: url("../imgs/1.png");
@@ -79,7 +69,6 @@ h4{
 }
 
 /*start responsive nav bar*/
-
 
 
 
@@ -199,7 +188,8 @@ nav{
     padding:50px;
     float:left;
       text-align: center;
-    
+    border:2px solid blue;
+    width:100%;
     }
     nav .logo{
      padding-left: 20px;
@@ -266,6 +256,7 @@ nav{
       content: '\f00d';
     }
   }
+
 
 /*end drob down menu of resources*/
 
@@ -794,9 +785,6 @@ margin:2%;
 
 
 }
-.main h2{
-  background-color: white;
-}
 .section:first-child{
     margin-top:150px;
 }
@@ -840,7 +828,16 @@ margin-top:50px;
     height: 100%;
   }
 
+.content-pag{
+    background-image: url("../imgs/content-marketing-4111003_1280.jpg");
 
+}
+.advertising-pag{
+    background-image: url("../imgs/advertising\ .png");
+}
+.keys-pag{
+    background-image: url("../imgs/5\ kayes.png");
+}
 
 .section li{
     font-size: 1rem;
@@ -905,13 +902,13 @@ padding:20px 0px 0px 150px;
 
 .free-div .free{
   width:30%;
-
+ 
 }
 
 .free-div .free img{
-  max-height: 140px;
-  max-width: 140px;
-  margin:5px;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .section .analytics{
