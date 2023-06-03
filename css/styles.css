@@ -3,9 +3,16 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     box-sizing: border-box;
-   
+    overflow-x: hidden;/*to treat float style in various dives*/
+}
+html{
+  scroll-behavior:smooth;
 
 }
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 /* Typeography General*/
 p{ 
     font-size: 1rem;
@@ -16,26 +23,27 @@ p{
 }
 /*for (about us/our services/let's talking/resources)*/
 h1{
-    background-color:#004aad;
-    font-family: 'Chewy', cursive;
+
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: bold;
-    color:white;
+    color:#004aad;
     padding:10px;
-    padding-left: 96px;
+    text-align: center;
     }
 /*for (our services headers and resources headers*/
 h2{
-background-color: white;
+
 color:#004aad;
 font-family: 'Poppins', sans-serif;
-font-size: 30px;
+font-size: 23px;
 font-weight: bold;
 text-align: center;
+
 }
 h3{
     color:#004aad;
-    font-size: 23px;
+    font-size: 21px;
 font-weight: bold;
 }
 
@@ -47,10 +55,7 @@ h4{
 
 /* start landing page*/
 /*insert background image to the page*/
-.container-resources{
-  margin:0 auto;
-  width:85%
-}
+
 
 .home {
     min-height: 100vh;
@@ -68,9 +73,9 @@ h4{
 
 
 nav{
-    background:white;
-    max-height:80px;
-    font-family: 'Nerko One', cursive;
+    background:#a5c7ea;
+    max-height:85px;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -85,18 +90,24 @@ nav{
   }
   nav .logo{
     float: left;
-  
-    padding-left: 60px;
+  width:180px;
+  height: 80px;
+    padding-left: 50px;
+  }
+  nav .logo img{
+    width: 65%;
+    height: 134%;
   }
   nav ul{
     float: right;
-    margin-right: 50px;
+    margin-right: 2px;
     list-style: none;
-  
+  padding:0 35px 0 0 ;
   }
   nav ul li{
     float: left;
-    background:white;
+   
+    position: relative;
   
   }
   nav ul li a{
@@ -104,13 +115,18 @@ nav{
     line-height: 50px;
     text-decoration: none;
     font-size: 18px;
+  
+    
+  }
+  .padding{
     padding: 8px 15px;
   }
   nav ul li a:hover{
-    color: #004aad;
+    color: black;
     border-radius: 5px;
     box-shadow:  0 0 5px  #004aad,
                  0 0 10px #004aad;
+   
                  
   }
   nav ul ul li:hover{
@@ -119,28 +135,32 @@ nav{
 
   nav ul ul li a:hover{
     box-shadow: none;
+  
   }
   nav ul ul{
+    z-index: 1000;
     position: absolute;
-    top: 90px;
+    top: 70px;
     border-top: 3px solid #004aad;
-    opacity: 0;
-    visibility: hidden;
+   left:-36px;
     transition: top .3s;
    padding:0px;
+   background-color: white;
+  opacity: 0;
+  visibility: hidden;
   }
   nav ul ul ul{
     border-top: none;
   }
   nav ul li:hover > ul{
-    top: 70px;
+    top: 50px;
     opacity: 1;
     visibility: visible;
   }
   nav ul ul li{
     position: relative;
     margin: 0px;
-    width: 200px;
+    width: 240px;
     float: none;
     display: list-item;
     border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -165,14 +185,15 @@ nav{
   }
   @media all and (max-width: 968px) {
     nav ul{
-    
-      float: left;
+    padding:50px;
+    float:left;
       text-align: center;
-    
+    border:2px solid blue;
+    width:100%;
     }
     nav .logo{
-      padding-left: 30px;
-      width: 100%;
+     padding-left: 20px;
+    width: 140px;
     }
     .show + a,nav ul{
       display: none;
@@ -189,7 +210,7 @@ nav{
       display: block;
       color: black;
       font-size: 18px;
-      padding: 0 20px;
+     
       line-height: 70px;
       cursor: pointer;
     }
@@ -201,27 +222,27 @@ nav{
       display: block;
       color: black;
       position: absolute;
-      top: 0;
+      top: 10px;
       right: 40px;
       line-height: 70px;
       cursor: pointer;
       font-size: 25px;
+      transform: scaleX(1.5);
+     
     }
+   
     nav ul ul{
+      
       top: 70px;
       border-top: 0px;
       float: none;
       position: static;
-      display: none;
       opacity: 1;
       visibility: visible;
+      margin-right: 2px;
+     
     }
-    nav ul ul a{
-      padding-left: 40px;
-    }
-    nav ul ul ul a{
-      padding-left: 80px;
-    }
+  
     nav ul ul ul li{
       position: static;
     }
@@ -239,29 +260,150 @@ nav{
 
 /*end drob down menu of resources*/
 
+.main-home{
+  height:100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden !important;
+ 
+}
+.main-home video{
 
+  width:100%;
+  height:100%;
+  pointer-events: none;
+  object-fit: cover;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
+.main-home .banner{
+  background-color: rgba(255, 255, 255, 0.603);
+  border-radius: 20px;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+ position:absolute;
+ text-align: center;
+ 
+}
+.main-home .banner h1{
+  color:#fff;
+  font-size: 3rem;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  background-color: transparent;
+}
+
+.main-home .banner h3{
+  color:black;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+}
+
+.main-home .fa-cog{
+  position: absolute;
+  font-size: 30rem;
+  opacity: .15;
+  color:#fff;
+  animation: rotate 10s linear infinite;/*animation waves*/
+}
+
+.main-home .nut1{
+  top:10%; left: -15rem;
+}
+
+.main-home .nut2{
+  bottom:23%; right: -13rem;
+  animation-direction: reverse;/*animation waves*/
+}
+ 
+/*animation waves*/
+@keyframes rotate{
+  100%{
+    transform: rotate(360deg);
+  }
+}
 
 /* dynamically create a navigation menu based on the sections of the page */
 
-html{
-    scroll-behavior:smooth;
-}
+
 
 .about-us{
     margin-top: 60px;
-    
+    position: relative;
+    overflow: hidden;
+  
+   /* background:linear-gradient(#D9E1F6, white);*/
 }
-
-
 .why-sai{
-  margin:50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding:0 4rem;
 }
+/*div of why sai image*/
+.imgoo{
+  width:32%;
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.imgoo video{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.imgoo img {
+  width: 95%;
+  object-fit: cover;
+  border-radius: 10px;
+ }
+ /*
+.about-us::before, .about-us::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity:.2;
+  border-radius: 50%;
+}
+
+.about-us::before {
+  height: 30rem;
+  width: 30rem;
+  background: #ccc;
+  bottom: 65rem;
+  left: -6rem;
+  box-shadow: 0px 0 74px -19px  #ccc;
+}
+
+
+.about-us::after {
+  height: 30rem;
+  width: 30rem;
+  background: #004aad;
+  top: -3rem;
+  right: -1rem;
+  box-shadow: 0px 0 74px -19px #004aad;
+
+}
+*/
+
 
 
 
 
 /*start feedback div */
-.demo{ background-image:url("../imgs/quotes3.png") }
+.demo{ 
+  background-image:url("../imgs/quot.png") ;
+  border-radius: 50px;
+ box-shadow: 0px 0 74px -19px #004aad;
+
+}
 .testimonial{
     padding: 35px 50px;
     margin: 0 20px 30px;
@@ -313,76 +455,229 @@ html{
     transition: all 0.4s ease 0s;
 }
 .owl-theme .owl-controls .owl-page.active span{ background: #036e74; }
-.our-services{
-    display:block;
-    padding-bottom: 200px;
-    padding-top: 60px;
-    
-}
-/*the end of testimonials*/
-/*start our services boxes*/
 
+
+
+
+/*the end of testimonials*/
+
+/*the start of our clients*/
+.title{
+  margin: 100px auto;
+}
+
+
+.slider{
+  display: grid;
+  height:250px;
+  margin:0px auto;
+  width:90%;
+  place-items: center;
+  
+}
+
+.slider-trace{
+  display: flex;
+  width:calc(250 * 6);
+  animation: scroll 20s linear infinite;/*make auto slider*/
+ 
+}
+.slide{
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;/*make simple popup to elementes*/
+}
+
+.slide img{
+  width:100%;
+  transition: transform 1s;/*make simple popup to elementes*/
+}
+.slide img:hover{
+
+  transform: translateZ(20px);/*make simple popup to elementes*/
+}
+/*make auto slider*/
+@keyframes scroll {
+  0% {
+    transform: translateX((0));
+
+  }
+  100% {
+    transform: translateX(calc(-250px *3));
+  }
+}
+
+
+
+
+
+/*the end of our clients*/
+/*start our services boxes*/
+.our-services{
+  display:block;
+  padding-bottom: 200px;
+  padding-top: 60px;
+  position: relative;
+
+ /* background:linear-gradient(#D9E1F6, white);*/
+}
 .our-services .service{
     display:flex;
     flex-wrap: wrap; 
     margin:auto;
     padding:5%;
+  
 }
 
+
 .our-services .service .box{
-    
+
 padding: 4px;
 cursor: pointer;
-width:30%;/* the half of the headerbox*/
+width:28%;/* the half of the headerbox*/
 box-sizing: border-box;/* to prevent including porder and padding size to the div size dont use margin if you want to insert margin you have to supstrict it from plan width*/
-margin:1% ;
+margin:50px auto ;
 align-items: center;
 text-align: center;
 border-radius:10px;
 border: 1px solid #004aad;
 border-bottom: 10px solid #004aad;
 box-shadow: 5px 5px 5px grey;
-height: auto;
-
+height: 250px;
+background-color:#a5c7ea;
+position:relative;
+transition: all 1s ;
 }
-
-/*
 .our-services .service .box:hover{
-box-shadow:gray;
-border:#004aad;
-background-color: #004bad5f;
-border-radius: 10px;
+  height: 320px;
 }
-*/
-.our-services .service .box .sora{
-    border-radius: 4px;
-    text-align: center;
-    width:100%;
+.our-services .service .box .com{
+
+ opacity:0;
+ transition: all 1s;
+}
+
+.our-services .service .box:hover .com{
+ opacity: 1;
+  position:absolute;
+  bottom:0px;
+  text-align: center;
+ 
+  width:100%;
+
+}
+.our-services .service .box:hover .prief img{
+  transform: rotate(360deg);
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+
+}
+.our-services .service .box button{
+  background-color: white;
+  font-size: 20px;
+  color: #004aad;
+}
 
 
-}
-.our-services .service .box .sora img{
-  max-height: 120px;
-  max-width: 120px;
-}
-.our-services .service .box h2{
 
-  font-size: 1.3rem;
+.our-services .service .box .prief{
+  position:absolute;
+  width:100%;
+  
+  top: -25%;
 }
+.our-services .service .box .prief img{
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+ transition:all 1s;
+}
+
+
+
 
 /*start designing resources page*/
 .resource{
-    min-height: 100vh;
-    background-image: url("../imgs/Learning-development-jobs-1280x720.jpg");
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;/*for responsive background*/
-    background-position: center center;
-    background-attachment: fixed;
+    height: 90vh;
+    width:100%;
+    
 }
-.email-pag{
-    background-image: url(../imgs/email-marketing-2362038_1920.png);
+.resource img{
+  width:100%;
+  height: 100%;
 }
+
+.all{
+  position: relative;
+}
+.animation-icon{
+  
+ display: flex;
+ justify-content: space-around;
+ position:absolute;
+ width:100%;
+
+
+}
+.icn{
+  width:50px;
+animation: movup 20s infinite alternate;
+animation-delay: 3s;
+
+}
+@keyframes movup{
+  0%{transform:translate(0,0);
+
+
+  }
+  100%{transform:translate(0,3000px);
+         opacity:.5;
+  }
+}
+.icn1{
+
+animation-delay: 4s;
+  width:40px;
+  height: 40px;
+ 
+}
+.icn2{
+  animation: movup 15s infinite alternate;
+  animation-delay: 5s;
+}
+.icn3 {
+
+animation-delay: 4s;
+
+}
+.icn4{
+  animation: movup 15s infinite alternate;
+ 
+
+}
+.icon5{
+
+  animation-delay: 6s;
+  width:35px;
+  height: 35px;
+}
+.icn6{
+  animation: movup 15s infinite alternate;
+  animation-delay: 7s;
+  width:35px;
+  height: 35px;
+}
+.icn7{
+
+  animation-delay: 8s;
+ 
+}
+
+
 /*
 .resource .overlay{
     background-color:#004badba;
@@ -485,6 +780,11 @@ box-sizing: border-box;
 vertical-align: top;
 margin:2%;
 }
+.main h2{
+  background-color: white;
+
+
+}
 .section:first-child{
     margin-top:150px;
 }
@@ -506,7 +806,7 @@ margin-top:50px;
 }
 
 .section span{
-    font-size: 17px ;
+  font-size: 1rem;
     font-weight: bolder;
     color:rgb(153, 151, 6);
     
@@ -565,6 +865,7 @@ margin-top:50px;
 .contento
 {
 width: 68%;
+text-align: center;
 }
 
  .imgo{
@@ -574,60 +875,56 @@ padding: 20px;
 }
 
 .imgo img{
-max-height: 220px;
-max-width:220px;
-border-radius:10px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
-/*div of why sai image*/
-.imgoo{
-  width:32%;
-  padding: 20px;
-  text-align: center;
-}
-.imgoo img{
-max-height: 300px;
-max-width:300px;
-border-radius:10px;
-}
+
 /*div content of services pages*/
+
+.container-resources{
+  margin:0 auto;
+  width:90%;
+  box-sizing: border-box;
+  
+}
+
 .free-div{
   display:flex;
+  width:100%;
   margin:100px 0px;
   box-sizing: border-box;
 }
 .free-div .free-content{
 width:70%;
-padding:0px 0px 0px 150px;
-
-
+padding:20px 0px 0px 150px;
 }
+
 .free-div .free{
- 
   width:30%;
-
+ 
 }
+
 .free-div .free img{
-  max-height: 140px;
-  max-width: 140px;
-  margin:5px;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .section .analytics{
     
 display:flex;
 
-
-
-
 }
 .section .analytics img{
-    height:200px;
+    height:auto;
+    object-fit: cover;
     width: 32%;
     margin:auto;
 }
 
 
-.index{
+ .index{
     display:flex;
     flex-wrap: wrap;
     width:100%;
@@ -640,6 +937,9 @@ display:flex;
 }
 .index-component li{
 padding-top: 15px;
+}
+.index-component h3{
+  text-align: center;
 }
 .index-component a{
     text-decoration: none;
@@ -690,8 +990,8 @@ padding-top: 15px;
 .lets-talking{
     background-color:#a5c7ea;
     display:block;
-
-
+border-top:5px solid black;
+    border-radius: 70px 70px 0 0;
 
 }
 .lets-talking .contact{
@@ -732,20 +1032,21 @@ padding-top: 15px;
     padding-left: 40px;
     text-align:left;
     color:black;
-font-size:22px;
-font-family:'Nerko One', cursive; ;
+
+font-family: 'Poppins', sans-serif;
 }
 
 .component li{
     list-style: none;
-    margin-top:10px;
+    margin-top:15px;
 }
 .component a{
     text-decoration: none;
 color:black;
 font-size:18px;
-font-family:'Nerko One', cursive; 
+font-family: 'Poppins', sans-serif;
 font-weight: bold;
+padding-top: 2px;
 }
 .component a:hover{
     color:white;
@@ -770,9 +1071,10 @@ font-weight: bold;
 
 
 
-/*add some styles to webpage to be responsive with devices with the small and mobile device*/
+/*add some styles to webpage to be responsive with the small and mobile devices */
 
 @media (max-width:991px){
+ 
 
 .lets-talking .contact{
     display: block;
@@ -785,42 +1087,63 @@ font-weight: bold;
     text-align: center;
     margin:30px 30px 0 30px;
 }
+.section .analytics{
+display: block;
+text-align: center;
+margin: auto;
+}
 
 .section .analytics img {
-    height: 200px;
-    width: 30%;
-    margin: auto;
+   
+  width: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+  
 }
 .resource .text p {
-    font-size: 20px;
-    font-family: 'Chewy', cursive;
+  font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
     color: black;
     padding-left: 40px;
 }
-.content-king{
+.content-king {
 display:block;
+}
+.why-sai{
+  flex-flow: column-reverse;
+  padding:0 2rem;
 }
 .content-king-reverse{
   flex-direction: column-reverse;
 }
 
-.imgo,
+
 .contento{
   width: 100%;
   padding:0px;
+  margin:20px
 }
- .imgo{
-    text-align: center;
+.imgo{
+  padding:0px;
+  margin:auto;
+  width:50%;
 }
+
+
 .imgoo{
-  width:100%;
- 
-  text-align: center;
+  position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+.imgoo img{
+  width:80%;
 }
 
 .free-div{
   display: block;
   text-align: center;
+  overflow-x: hidden;
 }
 .free-div .free-content,
 .free-div .free{
@@ -830,12 +1153,17 @@ display:block;
   padding:0px;
   
 }
+.free-div .free img{
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 
 .component{
     display:block;
-    width:35%;
-    margin:30px;
+    width:45%;
+    margin:10px;
     list-style: none;
 
 }
@@ -854,6 +1182,7 @@ display:block;
   margin: 10px;
   width:97%;
   order:2;
+  padding:15px;
 }
 .candy-wrapper .sidebar{
 width: 93%;
@@ -862,11 +1191,40 @@ order:1;
 }
 .our-services .service .box{
   text-align: center;
-  margin:10px;
+
   width:46%;
 }
-
+.index-component{
+  display:block;
+  width:46%;
+  margin:5px;
 }
+.index-component li{
+padding-top: 15px;
+margin:2px
+}
+.index-component a{
+  font-size: 18px;
+}
+.main-home .banner h1{
+  font-size: 2.5rem;
+}
+
+.main-home .banner h3{
+  font-size: 1rem;
+}
+.main-home  .wave{
+  height:5rem;
+}
+.main-home .fa-cog {
+  font-size: 20rem;
+}
+.slide{
+  width:150px
+}
+}
+
+
 /*styles of feedback*/
 
 
@@ -876,20 +1234,43 @@ order:1;
 @media (max-width:650px){
     .our-services .service .box{
         text-align: center;
-        margin:10px;
-        width:100%;
+       
+        width:80%;
     }
-  }
+    .component{
+      width:80%;
+    }
+    .index-component {
+      width:85%;
+     }
+     .main-home .banner h1{
+      font-size: 1.5rem;
+    }
+    
+
+    }
+    @media (max-width:490px){
+      .our-services .service .box{
+        text-align: center;
+        width:90%;
+        height:260px;
+    }
+    .our-services .service .box:hover{
+      height:360px;
+    }
+    .our-services .service .box .prief img{
+
+      width: 200px;
+      height: 200px;
+    }
+    .icn1, .icn2, .icn3, .icn4, .icn5, .icn6, .icn7{
+      width:20px;
+      height: 20px;
+    }
+    }
+    
+   
+
+  
 
 
-@media (min-width:992px){
-
-  .lets-talking .contact .contacta {
-      width: 42%;
-      text-align: center;
-      margin: 5px;
-      padding: 10px;
-      box-sizing: border-box;
-}
-
-}

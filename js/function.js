@@ -1,4 +1,5 @@
-// make a randome background
+// make a randome slideshow background
+/*
 let landing= document.querySelector(".home");
 
 //get array of imags
@@ -12,9 +13,9 @@ setInterval(()=> {
     landing.style.backgroundImage= `url(imgs/${imags[randomNumber]})`
 },5000
 );
+*/
 
-
-
+/*
 
 // creat pop up for our services boxes
 let boxes=  document.querySelectorAll(".box");
@@ -57,10 +58,10 @@ document.body.appendChild(overlay);
       });
       
       });
-      
+    */  
   
         
-// appear and desapear nav while scrolling .
+// add testmonials
 $(document).ready(function(){
   $("#testimonial-slider").owlCarousel({
       items:1,
