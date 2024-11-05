@@ -534,25 +534,25 @@ nav{
 
 
 .our-services .service .box{
-
-padding: 4px;
-cursor: pointer;
-width:28%;/* the half of the headerbox*/
-box-sizing: border-box;/* to prevent including porder and padding size to the div size dont use margin if you want to insert margin you have to supstrict it from plan width*/
-margin:50px auto ;
-align-items: center;
-text-align: center;
-border-radius:10px;
-border: 1px solid #004aad;
-border-bottom: 10px solid #004aad;
-box-shadow: 5px 5px 5px grey;
-height: 250px;
-background-color:#a5c7ea;
-position:relative;
-transition: all 1s ;
+  padding: 4px;
+  cursor: pointer;
+  width: 25%;
+  box-sizing: border-box;
+  margin: 50px 50px;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #004aad;
+  border-bottom: 10px solid #004aad;
+  box-shadow: 5px 5px 5px grey;
+  height: 100px;
+  background-color: #a5c7ea;
+  position: relative;
+  transition: all 1s;
 }
+
 .our-services .service .box:hover{
-  height: 320px;
+  height: 250px;
 }
 .our-services .service .box .com{
 
@@ -565,15 +565,15 @@ transition: all 1s ;
   position:absolute;
   bottom:0px;
   text-align: center;
- 
+ padding: 4px;
   width:100%;
 
 }
 .our-services .service .box:hover .prief img{
   transform: rotate(360deg);
   border-radius: 50%;
-  width: 170px;
-  height: 170px;
+  width: 120px;
+  height: 120px;
 
 }
 .our-services .service .box button{
@@ -591,8 +591,8 @@ transition: all 1s ;
   top: -25%;
 }
 .our-services .service .box .prief img{
-  width: 220px;
-  height: 220px;
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
  transition:all 1s;
 }
