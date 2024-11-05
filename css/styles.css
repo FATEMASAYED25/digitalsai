@@ -552,7 +552,11 @@ nav{
 }
 
 .our-services .service .box:hover{
+<<<<<<< HEAD
   height: 250px;
+=======
+  height: 280px;
+>>>>>>> origin/main
 }
 .our-services .service .box .com{
 
