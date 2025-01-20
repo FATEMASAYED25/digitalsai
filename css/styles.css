@@ -774,7 +774,7 @@ position:sticky
 .main{
  width:74%;
 padding:40px;
-background-color:rgba(174, 218, 243, 0.323) ;
+
 display: inline-block;
 box-sizing: border-box;
 vertical-align: top;
@@ -924,7 +924,7 @@ display:flex;
 .section .analytics img{
     height:auto;
     object-fit: cover;
-    width: 32%;
+    width: 48%;
     margin:auto;
 }
 
@@ -1072,6 +1072,23 @@ padding-top: 2px;
     padding-top: 25px;
     padding-left: 0px;
     
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.second-column div {
+ 
+  padding: 4px;
 }
 
 
